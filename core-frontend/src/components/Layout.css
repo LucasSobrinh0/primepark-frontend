@@ -1,0 +1,81 @@
+/* Contêiner principal que envolve sidebar e conteúdo */
+.layout-container {
+    display: flex;
+    min-height: 100vh; /* Ocupa toda a altura da tela */
+  }
+  
+  /* Botão que aparece apenas em telas menores */
+  .toggle-sidebar-btn {
+    display: none;
+    margin: 16px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  /* Sidebar */
+  .sidebar-menu {
+    width: 250px;
+    background-color: #f8f8f8;
+    transition: transform 0.3s ease;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar-menu h2 {
+    margin-bottom: 16px;
+  }
+  
+  .sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-menu li {
+    margin: 8px 0;
+  }
+  
+  .sidebar-menu li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* Conteúdo principal */
+  .main-content {
+    flex: 1;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    /* Empilha sidebar e conteúdo na vertical */
+    .layout-container {
+      flex-direction: column;
+      position: relative;
+    }
+  
+    /* Exibe o botão de toggle no mobile */
+    .toggle-sidebar-btn {
+      display: inline-block;
+    }
+  
+    /* Deixa a sidebar "escondida" fora da tela e só aparece ao clicar no toggle */
+    .sidebar-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      transform: translateX(-100%);
+    }
+  
+    .sidebar-menu.open {
+      transform: translateX(0);
+    }
+  
+    .main-content {
+      margin-top: 70px; /* Espaço para não ficar atrás do botão de toggle */
+    }
+  }
+  
