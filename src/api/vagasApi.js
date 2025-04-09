@@ -2,7 +2,7 @@
 import axios from './axiosConfig';
 
 // Ajuste a URL se for diferente
-const BASE_URL = 'http://127.0.0.1:8000/api/vagas/vaga/';
+const BASE_URL = `${process.env.REACT_APP_API_URL}/api/vagas/vaga/`;
 
 export async function fetchVagas() {
   const response = await axios.get(BASE_URL);
