@@ -15,7 +15,7 @@ function App() {
     <Router>
       <Routes>
         {/* ROTA EXCLUSIVA PARA O APPLY */}
-        <Route path="/apply" element={<ApplyPage />} />
+        <Route path="apply" element={<ApplyPage />} />
 
         {/* PARA TODAS AS OUTRAS ROTAS, USAMOS O LAYOUT */}
         <Route path="/" element={<Layout />}>
