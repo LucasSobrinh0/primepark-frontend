@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Import das páginas
 import Layout from './components/Layout';
-import ApplyPage from './ApplyPage';
+import ApplyPage from './pages/ApplyPage';
 import CandidaturaView from './pages/CandidaturaView.js';
 import VagasView from './pages/VagasView';
 import DashboardAnalitico from './pages/DashboardAnalitico';
